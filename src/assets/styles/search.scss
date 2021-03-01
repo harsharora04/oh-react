@@ -1,0 +1,119 @@
+$orange: rgb(238, 81, 53);
+$black: #000000;
+$white: #ffffff;
+
+.search {
+    &__list {
+        list-style: none;
+        max-width: 1280px;
+        margin: 0 auto;
+        &__item {
+            display: flex;
+            margin-top: 60px;
+            text-decoration: none;
+            color: $black;
+            max-width: 690px;
+            &:first-child {
+                margin-top: 30px;
+            }
+        }
+        &__icon {
+            width: 125px;
+            height: 105px;
+            margin-right: 36px;
+            border-radius: 10px;
+            overflow: hidden;
+            flex-shrink: 0;
+            > img {
+                width: inherit;
+                height: inherit;
+                object-fit: contain;
+            }
+            &--empty {
+                background-color: $orange;
+            }
+        }
+        &__title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+        &__text {
+            font-size: 14px;
+            &--helper {
+                color: rgba($black, 0.6);
+                margin-bottom: 8px;
+            }
+        }
+    }
+    &__pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        &__item {
+            margin-right: 20px;
+            padding: 8px 12px;
+            border-radius: 10px;
+            &--active {
+                background-color: $orange;
+                .search__pagination__link {
+                    color: $white;
+                }
+            }
+        }
+        &__link {
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: $black;
+        }
+    }
+    &__bar {
+        &__container {
+            display: flex;
+            align-items: center;
+            padding: 24px;
+        }
+        &__title {
+            color: $orange;
+            letter-spacing: 0.6px;
+        }
+        &__form {
+            margin-left: 88px;
+            min-width: 620px;
+            padding: 16px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba($black, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &__input {
+                box-sizing: border-box;
+                margin-left: 24px;
+                font-size: 20px;
+                font-weight: bold;
+                border: 0;
+                outline: 0;
+                width: 100%;
+                &__container {
+                    display: flex;
+                    align-items: center;
+                    flex: 1;
+                }
+            }
+            &__icon {
+                font: 20px;
+            }
+            &__cancel {
+                appearance: none;
+                border: 0;
+                background: 0;
+                cursor: pointer;
+                font-size: 20px;
+                line-height: 16px;
+            }
+        }
+    }
+  }
